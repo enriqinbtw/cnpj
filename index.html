@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor de CNPJ</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de CNPJ</h1>
+        <div class="search-box">
+            <input type="text" id="cnpjInput" placeholder="Digite apenas números" maxlength="14">
+            <button onclick="consultarCNPJ()">Consultar</button>
+        </div>
+
+        <div id="resultado" class="resultado-card">
+            <h2>Dados da Empresa</h2>
+            <p><strong>Razão Social:</strong> <span id="razao">---</span></p>
+            <p><strong>Nome Fantasia:</strong> <span id="fantasia">---</span></p>
+            <p><strong>CNPJ:</strong> <span id="cnpj_res">---</span></p>
+            <p><strong>Atividade Principal:</strong> <span id="atividade">---</span></p>
+            <p><strong>Capital Social:</strong> <span id="capital">---</span></p>
+            <p><strong>Situação:</strong> <span id="situacao">---</span></p>
+            <p><strong>Endereço:</strong> <span id="endereco">---</span></p>
+            <p><strong>Telefone:</strong> <span id="telefone">---</span></p>
+        </div>
+
+        <button class="btn-pdf" onclick="gerarPDF()">Gerar Relatório PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
